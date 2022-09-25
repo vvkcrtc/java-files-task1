@@ -62,17 +62,6 @@ public class Main {
                 if (dir.equals(rootDirs[0])) {
                     for (String srcDir : srcDirs) {
                         createDir(rootPath + '/' + dir + '/' + srcDir);
-
-                    }
-                }
-                if (dir.equals(rootDirs[1])) {
-                    for (String resDir : resDirs) {
-                        createDir(rootPath + '/' + dir + '/' + resDir);
-                    }
-                }
-                if (dir.equals(rootDirs[2])) {
-                    for (String srcDir : srcDirs) {
-                        createDir(rootPath + '/' + dir + '/' + srcDir);
                         if (srcDir.equals(srcDirs[0])) {
                             for (String fileName : mainFiles) {
                                 createFile(rootPath + '/' + dir + '/' + srcDir + '/' + fileName);
@@ -80,6 +69,12 @@ public class Main {
                         }
                     }
                 }
+                if (dir.equals(rootDirs[1])) {
+                    for (String resDir : resDirs) {
+                        createDir(rootPath + '/' + dir + '/' + resDir);
+                    }
+                }
+
                 if (dir.equals(rootDirs[3])) {
                     tempPath = rootPath + '/' + dir + "/temp.txt";
                     createFile(tempPath);
